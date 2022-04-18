@@ -1,7 +1,6 @@
+import random
 
-# plus tard, ajout de random(1, 1000)
-nombre_mystere = 7
-
+nombre_mystere = random.randint(1,1000)
 essai = input("Devinez le nombre mystère : ")
 
 if(int(essai) < nombre_mystere):
