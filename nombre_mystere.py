@@ -5,8 +5,10 @@ nombre_mystere = 7
 essai = input("Devinez le nombre mystère : ")
 
 if(int(essai) < nombre_mystere):
-    print("Le nombre mystère est plus grand !")
+    resultat = "Le nombre mystère est plus grand !"
 elif(int(essai) > nombre_mystere):
-    print("Le nombre mystère est plus petit !")
+    resultat = "Le nombre mystère est plus petit !"
 else:
-    print("Bravo, vous avez trouver le nombre mystère qui était : " + str(nombre_mystere))
+    resultat = "Bravo, vous avez trouver le nombre mystère qui était : " + str(nombre_mystere)
+
+print(resultat)
