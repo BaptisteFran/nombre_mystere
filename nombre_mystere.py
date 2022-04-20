@@ -1,22 +1,25 @@
 import random
 
-nombre_mystere = random.randint(1,50)
-essai = input("Devinez le nombre mystère : ")
-if(essai.isdigit()):
-    print("Vous n'avez pas rentré un nombre !")
-    exit() 
-else:
-    essai = int(essai)
-
-# A rajouter :
-# Nombre maximum d'essai avant gameover
-
-if(essai < nombre_mystere):
-    resultat = "Le nombre mystère est plus grand !"
-elif(essai > nombre_mystere):
-    resultat = "Le nombre mystère est plus petit !"
-else:
-    resultat = "Bravo, vous avez trouvé le nombre mystère qui était : " + str(nombre_mystere)
+nombre_mystere = random.randint(1,10)
+essai = 0
 
 
-print(resultat)
+while(essai < 5):
+    nombre_donne = input("Devinez le nombre mystère : ")
+    if(not nombre_donne.isdigit()):
+        print("Vous n'avez pas rentré un nombre !")
+        exit() 
+    else:
+        nombre_donne = int(nombre_donne)
+    if(nombre_donne < nombre_mystere):
+        resultat = "Le nombre mystère est plus grand !"
+        essai +=1
+    elif(nombre_donne > nombre_mystere):
+        resultat = "Le nombre mystère est plus petit !"
+        essai +=1
+    else:
+        resultat = f"Bravo, vous avez trouvé le nombre mystère qui était : {nombre_mystere} en {essai+1} essai(s)"
+        essai = 5
+    print(resultat)
+
+
