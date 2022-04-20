@@ -22,4 +22,6 @@ while(essai < 5):
         essai = 5
     print(resultat)
 
+print(f"Vous avez perdu, le nombre mystère était {nombre_mystere}")
+
 
